@@ -1,0 +1,286 @@
+{
+	"info": {
+		"_postman_id": "2d66bacb-ceb1-41bc-a94a-30d45f0eb5eb",
+		"name": "Expertron: Mentor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Mentor",
+			"item": [
+				{
+					"name": "Get All mentors detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-header",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTAzMGQzM2YwODVkYjQyZjAwOTI1YzciLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE1NzcyNzk5Mzh9.SfKdfBze-CrKCfhsLqWE1c0HYhr7AmWQUEi8smZtQoA"
+							},
+							{
+								"key": "",
+								"type": "text",
+								"value": "all",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:3005/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3005",
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add mentor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-auth-header",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTBjNjY1N2E1M2M0OTA5ODQ3NDAwNGMiLCJpYXQiOjE1Nzc4NzA5MzZ9.bnwjFSUKl5fhkgVy2lRHIJ6vR00Af0X4qkPb_bEDkXU",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Xyz Abcd\",\n\t\"age\":\"25\",\n\t\"sex\":\"M\",\n\t\"image\":\"\",\n\t\"tasks\":[{\"title\":\"task1\"},{\"title\":\"task2\"},{\"title\":\"task3\"}],\n\t\"mobile\":1234567,\n\t\"dateadded\":\"31/12/2019\",\n\t\"datemodified\":\"31/12/2019\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3005/add",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3005",
+							"path": [
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update mentor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-auth-header",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTBjNjY1N2E1M2M0OTA5ODQ3NDAwNGMiLCJpYXQiOjE1Nzc4NzA5MzZ9.bnwjFSUKl5fhkgVy2lRHIJ6vR00Af0X4qkPb_bEDkXU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\":\"Blog title 22222222222\",\n\t\"author\":\"Admin\",\n\t\"tags\":[\"ML\",\"AI\"],\n\t\"image\":\"\",\n\t\"body\":\"dkjahskdj askjdh asjdhalskdlj dkjahskdj askjdh asjdhalskdlj haskjdh alksjdh aslkjdh alskjdh alksjdh alkjdshas dlkjshdakkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkksadasdasddsad dkjahskdj askjdh asjdhalskdlj haskjdh alksjdh aslkjdh alskjdh alksjdh alkjdshas dlkjshdakkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkksadasdasddsad haskjdh alksjdh aslkjdh alskjdh alksjdh alkjdshas dlkjshdakkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkksadasdasddsad\",\n\t\"datepublished\":\"31/12/2019\",\n\t\"datemodified\":\"31/12/2019\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3005/update/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3005",
+							"path": [
+								"update",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5e0ebffa1f8e5734f092af9f"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Product 2",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"_id\":\"5e02cf70431a1610b830438f\",\n\t\"data\":{\n\t\t\"name\":\"iphone cover\",\n\t\t\"price\":340,\n\t\t\"category\":[\"accessories\",\"mobile\"]\n\t}\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:3000/product/update",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"product",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "19"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13-xLxFCj7j+vyECUc3FxiybfbcYZw\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Dec 2019 03:21:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "update prod details"
+						}
+					]
+				},
+				{
+					"name": "Delete mentor",
+					"request": {
+						"auth": {
+							"type": "apikey"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-auth-header",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTBjNjY1N2E1M2M0OTA5ODQ3NDAwNGMiLCJpYXQiOjE1Nzc4NzA5MzZ9.bnwjFSUKl5fhkgVy2lRHIJ6vR00Af0X4qkPb_bEDkXU",
+								"type": "text"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTBjNjY1N2E1M2M0OTA5ODQ3NDAwNGMiLCJpYXQiOjE1Nzc4NzA5MzZ9.bnwjFSUKl5fhkgVy2lRHIJ6vR00Af0X4qkPb_bEDkXU",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:3005/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3005",
+							"path": [
+								":id"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5e0c66cfa53c49098474004f"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "934d16c1-9705-4552-a273-d01ee815de23",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "02c5d825-0f04-4e49-8b6e-61cd68d86dce",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
